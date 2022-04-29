@@ -22,11 +22,11 @@ class TestSitelockLogin():
     #     driver.maximize_window()
     
 
-    def test_login(self):
-        driver = TestSetdriver.test_setDriver.driver
-        driver.get("https://secure.sitelock.com/login")
-        driver.maximize_window()
-        login = LoginPage(driver)
+    def test_login(self, Driver):
+        #driver = TestSetdriver.test_setDriver.driver
+        Driver.get("https://secure.sitelock.com/login")
+        Driver.maximize_window()
+        login = LoginPage(Driver)
         login.enter_username("sectigo_test_0")
         login.enter_password("$ectigo_Test1@")
         login.enter_submit()
