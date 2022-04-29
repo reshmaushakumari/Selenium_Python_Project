@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-from Pages.loginPage import LoginPage
+from Pages.login_Page import LoginPage
 
 # @pytest.mark.usefixtures("test_setDriver")
 class TestSitelockLogin():

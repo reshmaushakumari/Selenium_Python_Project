@@ -8,7 +8,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 @pytest.fixture(autouse=True)
 def Driver():
     # global driver
-    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     yield driver
     driver.close()
     # driver.get("https://secure.sitelock.com/login")
